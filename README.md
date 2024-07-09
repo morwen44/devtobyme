@@ -40,7 +40,7 @@ This project was divided into two main phases. The first phase focused on the co
 7. **"Top" Filter Activation:** 
     - Displays top posts based on number of reactions.
 
-8. **Aside Section:**
+8. **Tag Lists Section:**
     - Contains three lists organized by tags.
     - Each list shows five posts containing the selected tag.
     - Both central posts and post titles in each list link to the post detail view upon clicking.
