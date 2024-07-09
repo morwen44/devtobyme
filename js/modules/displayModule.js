@@ -36,7 +36,7 @@ export const getReactions = async (page, postObject, postId) => {
 
   let totalCounter = 0;
   const totalCounterDisplay = document.createElement("div");
-  totalCounterDisplay.className = "total-counter";
+  totalCounterDisplay.className = "total-counter d-none d-md-block ";
   totalCounterDisplay.textContent = `${totalCounter} reactions`;
 
   reactionOrder.forEach(async (key) => {
@@ -359,44 +359,34 @@ export const generateComments = async (page, comments, number, postId) => {
     if (page === "mainPage") {
       eachComment.classList.add("comment");
     }
-    if (page === 'new'){
-      avatarImg.src = 'https://randomuser.me/api/portraits/women/55.jpg';
-      nameComment.textContent = 'Lenny Alexis';
+    if (page === "new") {
+      avatarImg.src = "https://randomuser.me/api/portraits/women/55.jpg";
+      nameComment.textContent = "Lenny Alexis";
       contentText.textContent = comment;
       commentSection.className = "d-flex flex-column gap-2 ms-2 me-3";
     }
   });
 
-  if (page === "detailPage" || 'new') {
+  if (page === "detailPage") {
     seeAll.classList.add("d-none");
   }
 
-  
   commentSection.append(seeAll);
   return commentSection;
 };
 
-let buttonClasses = [
-  "btn-blue",
-  "btn-indigo",
-  "btn-pink",
-  "btn-teal",
-];
-
+let buttonClasses = ["btn-blue", "btn-indigo", "btn-pink", "btn-teal"];
 
 export const createLinks = async (page, tagsString) => {
   let container = document.createElement("div");
   container.className = "d-flex";
   let arrayOfWords = tagsString;
   clearContainer(container);
-  
-  
+
   arrayOfWords.forEach((word, index) => {
-  
     let button = document.createElement("button");
     button.className = "d-flex gap-1 btn btn-ghost align-items-center";
     button.id = index;
-
 
     let a = document.createElement("a");
     a.className = "ps-1 fs-m link-border";
@@ -426,12 +416,10 @@ export const createLinks = async (page, tagsString) => {
       "M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636l4.95 4.95z"
     );
 
-   
     closeIcon.appendChild(closePath);
     x.append(closeIcon);
     button.append(a);
     button.append(x);
-
 
     container.append(button);
 
@@ -505,7 +493,6 @@ export const generateTagLists = (posts, tagsArray) => {
 
     displayTitles(titlesContainer, filteredPosts);
 
-
     cardDiv.append(cardHeader);
     cardDiv.append(titlesContainer);
     tagListsContainer.append(cardDiv);
@@ -513,7 +500,6 @@ export const generateTagLists = (posts, tagsArray) => {
 };
 
 const filterPostsByTag = (allPosts, tag) => {
-
   return allPosts.filter(
     (post) => post.postTags && post.postTags.includes(tag)
   );
@@ -557,4 +543,3 @@ const isNewPost = (postDate) => {
   let daysDifference = timeDifference / (1000 * 3600 * 24);
   return daysDifference <= 680;
 };
-
