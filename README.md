@@ -4,6 +4,12 @@
 
 Recreation of the main page and functionalities of the Dev.to website.
 
+1. [Project Overview](#project-overview)
+2. [Features](#features)
+3. [Technologies Used](#technologies-used)
+4. [Project Roles](#project-roles)
+5. [Project Phases](#project-phases)
+
 ## Project Overview
 
 This project was divided into two main phases. The first phase focused on the collaborative recreation of the visuals of the existing website Dev.to. The second phase was dedicated to independently developing the website's functionality. The project involved managing various aspects from inception to completion, ensuring adherence to timelines and quality standards. We utilized SASS, HTML, CSS, Bootstrap, JavaScript, Firebase, and Mockaroo for data simulation.
